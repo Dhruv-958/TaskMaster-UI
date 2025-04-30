@@ -3,6 +3,8 @@ import axios from 'axios';
 import './Auth.css';
 
 const Auth = () => {
+  const backend_url =  import.meta.env.VITE_REACT_APP_BACKEND;
+
   const [signupData, setSignupData] = useState({
     name: '',
     email: '',
@@ -16,7 +18,7 @@ const Auth = () => {
 
   const handleSignup = async () => {
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/signup', signupData);
+      const res = await axios.post(`${backend_url}auth/signup`, signupData);
       alert('Signup successful!');
       console.log(res.data);
     } catch (err) {
@@ -27,7 +29,7 @@ const Auth = () => {
 
   const handleSignin = async () => {
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/signin', signinData);
+      const res = await axios.post(`${backend_url}auth/signin`, signinData);
       alert('Signin successful!');
       console.log(res.data);
     } catch (err) {
