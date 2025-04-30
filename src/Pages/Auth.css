@@ -1,0 +1,92 @@
+.auth-container {
+  background-color: #FBFFE4;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative; 
+}
+
+.logo {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  color: #3D8D7A;
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+  font-family: 'Gugi';
+}
+
+.auth-box {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* Ensures both sections stretch equally */
+  width: 900px;
+  margin: 0 auto;
+  border: 2px solid #a3c48c;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.auth-section {
+  flex: 1;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Pushes button to bottom */
+  gap: 20px;
+}
+
+.signup-section {
+  background-color: #ffffff;
+  border-right: 2px solid #e0eacb;
+}
+
+.signin-section {
+  background-color: #B3D8A8;
+}
+
+.auth-section input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #D9D9D9;
+}
+
+.auth-section button {
+  padding: 12px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.3s ease;
+  margin-top: auto; /* Makes sure the button stays at the bottom */
+}
+
+.signup-btn {
+  background-color: #B3D8A8;
+  color: #1c351f;
+}
+
+.signup-btn:hover {
+  background-color: #8bc68b;
+}
+
+.signin-btn {
+  background-color: #ffffff;
+  color: #1c351f;
+  border: 2px solid #a5d6a7;
+}
+
+.signin-btn:hover {
+  background-color: #d1e7d3;
+}
