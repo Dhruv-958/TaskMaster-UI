@@ -45,7 +45,7 @@ function App() {
         <ul className="data-list">
           {data.map((item) => (
             <li key={item._id} className="data-item">
-              <div><strong>Name:</strong> {item.name}</div>
+              <div><strong>Full Name:</strong> {item.name}</div>
               <div><strong>Age:</strong> {item.age}</div>
             </li>
           ))}
