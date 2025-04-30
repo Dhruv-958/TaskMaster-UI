@@ -18,7 +18,7 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://127.0.0.1:5000/api/example', newRecord)
+    axios.post(`${backend_uri}example`, newRecord)
       .then((response) => {
         setData([...data, response.data]);
         setNewRecord({ name: '', age: '' });
