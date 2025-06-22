@@ -1,0 +1,90 @@
+.leaderboard-container {
+  height: 100vh;
+  padding: 30px;
+  background-color: #f4f9f7;
+  font-family: 'Segoe UI', sans-serif;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.leaderboard-title {
+  text-align: center;
+  color: #3D8D7A;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.leaderboard-search {
+  width: 300px;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.leaderboard-table-wrapper {
+  width: 100%;
+  max-width: 800px;
+  height: 60vh;
+  overflow-y: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: white;
+  border-radius: 8px;
+}
+
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.leaderboard-table th,
+.leaderboard-table td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.leaderboard-table th {
+  position: sticky;
+  top: 0;
+  background-color: #3D8D7A;
+  color: white;
+  z-index: 1;
+}
+
+.leaderboard-row:hover {
+  background-color: #f0f7f5;
+  cursor: pointer;
+}
+
+.leaderboard-name {
+  color: #2c5d52;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.rank-1 {
+  background-color: #ffe082;
+  font-weight: bold;
+}
+
+.rank-2 {
+  background-color: #cfd8dc;
+  font-weight: bold;
+}
+
+.rank-3 {
+  background-color: #ffccbc;
+  font-weight: bold;
+}
+
+.leaderboard-loading,
+.leaderboard-error {
+  text-align: center;
+  font-size: 18px;
+  color: #e53935;
+  margin-top: 50px;
+}

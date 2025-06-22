@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Dashboard from './Pages/Dashboard';
 import HomePage from './Pages/HomePage';
+import UserProfile from './Pages/UserProfile';
 import Auth from './Pages/Auth';
 import './App.css';
 
@@ -13,7 +14,9 @@ function App() {
       <Route path="/auth" element={<Auth />} />
 
       {/* Protected Routes */}
-      <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/dashboard/:id" element={<Dashboard />} />
+      <Route path="/profile/:id" element={<UserProfile />} />
+
     </Routes>
   </Router>
   );

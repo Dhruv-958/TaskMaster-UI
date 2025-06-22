@@ -1,92 +1,128 @@
+/* Main container */
 .auth-container {
-  background-color: #FBFFE4;
-  height: 100vh;
-  width: 100vw;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  position: relative; 
+  height: 100vh;
 }
 
 .logo {
-  position: absolute;
-  top: 30px;
-  left: 40px;
-  color: #3D8D7A;
-  font-size: 28px;
-  font-weight: bold;
-  margin: 0;
-  font-family: 'Gugi';
+    font-size: 36px;
+    font-family: "Gugi", cursive;
+    color: #3D8D7A;
+    /* margin: 30px 0 20px 0; */
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-weight: lighter;
 }
 
+/* Auth box (split view like open book) */
 .auth-box {
   display: flex;
-  justify-content: center;
-  align-items: stretch; /* Ensures both sections stretch equally */
-  width: 900px;
-  margin: 0 auto;
-  border: 2px solid #a3c48c;
-  border-radius: 12px;
+  width: 90%;
+  max-width: 1000px;
+  height: 70%;
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  box-shadow: 0 8px 30px rgb(10 41 31);
+  background: #ffffff;
+  margin-top: 130px;
 }
 
+/* Shared section styles */
 .auth-section {
   flex: 1;
   padding: 40px 30px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Pushes button to bottom */
-  gap: 20px;
+  justify-content: center;
+  gap: 15px;
+  color: #1a1a1a;
 }
 
+/* Specific section tweaks for book style */
 .signup-section {
-  background-color: #ffffff;
-  border-right: 2px solid #e0eacb;
+  border-right: 2px solid #e0e0e0;
+  align-items: flex-end;
+  text-align: right;
 }
 
 .signin-section {
-  background-color: #B3D8A8;
+  align-items: flex-start;
+  text-align: left;
 }
 
+.auth-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #3d8d7a;
+}
+
+/* Inputs */
 .auth-section input {
-  padding: 12px;
+  padding: 12px 16px;
+  width: 100%;
+  max-width: 300px;
   border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 14px;
-  background-color: #D9D9D9;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
 }
 
-.auth-section button {
-  padding: 12px;
+.auth-section input:focus {
+  border-color: #3d8d7a;
+}
+
+/* Buttons */
+.signup-btn,
+.signin-btn {
+  margin-top: 10px;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  background-color: #3d8d7a;
+  color: white;
   font-weight: bold;
   border: none;
-  border-radius: 6px;
   cursor: pointer;
-  font-size: 15px;
   transition: background-color 0.3s ease;
-  margin-top: auto; /* Makes sure the button stays at the bottom */
 }
 
-.signup-btn {
-  background-color: #B3D8A8;
-  color: #1c351f;
-}
-
-.signup-btn:hover {
-  background-color: #8bc68b;
-}
-
-.signin-btn {
-  background-color: #ffffff;
-  color: #1c351f;
-  border: 2px solid #a5d6a7;
-}
-
+.signup-btn:hover,
 .signin-btn:hover {
-  background-color: #d1e7d3;
+  background-color: #2c6b5f;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .auth-box {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .signup-section,
+  .signin-section {
+    align-items: center;
+    text-align: center;
+    border-right: none;
+  }
+
+  .auth-section input {
+    max-width: 100%;
+  }
+}
+
+.hidden-input {
+  visibility: hidden;
+}
+.back-btn{
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background-color: transparent;
+  border: none;
+  font-size: 15px;
+  color: #3d8d7a;
+  cursor: pointer;
 }
